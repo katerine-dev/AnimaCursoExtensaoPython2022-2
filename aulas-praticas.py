@@ -17,9 +17,9 @@ print(variavel_inteira_idade)
 print("Minha idade é "+str(variavel_inteira_idade)+" anos") # concatenação (precisa ser da mesma classe)
 print(f"Minha idade é {variavel_inteira_idade}") # precisa colocar o f de formatação de valores
 print("Minha idade é {}".format(variavel_inteira_idade)) # .format = formatação de valores
-print("Minha idade é", variavel_inteira_idade) # funciona também
+print("Minha idade é", variavel_inteira_idade) # funciona também (mas não é concatenação)
 
-# Quando quiser exibir "Meu nome é ..X. e tenho ...
+# Quando quiser exibir "Meu nome é ... e tenho ...
 # anos ..."  trocando pelas variáveis nome e idade
 
 print("Meu nome é {} e tenho {} anos".format(variavel_string_nome, variavel_inteira_idade))
