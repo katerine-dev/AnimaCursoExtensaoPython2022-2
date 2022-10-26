@@ -23,3 +23,4 @@ print("Minha idade é", variavel_inteira_idade) # funciona também (mas não é 
 # anos ..."  trocando pelas variáveis nome e idade
 
 print("Meu nome é {} e tenho {} anos".format(variavel_string_nome, variavel_inteira_idade))
+
