@@ -7,7 +7,6 @@ while(contador <= 10):
     print(contador)
     contador = contador + 1 # contador += 1
 
-# Laço for (python for = for each/ para cada)
 fruta = "Morango"
 
 # Lista
@@ -43,4 +42,10 @@ i=0 # geralmente é i (index)
 while(i<5):
     print(frutas[i])
     i = i + 1
+
+# Laço for (python for = for each/ para cada)
+print("\nExemplo das frutas com FOR...")
+
+for fruta in frutas: # sem parênteses
+    print(fruta)
 
