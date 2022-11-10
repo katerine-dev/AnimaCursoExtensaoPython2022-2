@@ -49,3 +49,5 @@ print("\nExemplo das frutas com FOR...")
 for fruta in frutas: # sem parênteses
     print(fruta)
 
+for i in frutas: # sem parênteses
+    print(i)
