@@ -8,8 +8,6 @@ nome = input("Informe o nome do herói/vilão: ")
 nome_civil = input("Informe o nome civil do herói/vilão (sua identidade secreta): ")
 tipo_numerico = input("Tecle 1 para Herói(na) ou 2 para Vilã(o): ")
 
-# Consulta aqui a tabela grupos e exibe na tela (....) 
-
 # Consulta para o valor máximo usado no banco
 
 sql = "SELECT MAX(pessoa_id)+1 FROM pessoas" # vai pegar o 12 - "incrementar" - vai pegar a ultima linha e me retornar a próxima
