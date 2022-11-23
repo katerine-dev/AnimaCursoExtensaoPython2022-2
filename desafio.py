@@ -12,17 +12,19 @@ sql = "SELECT grupo_id, nome FROM grupos" # confirmando quais são os grupos que
 cursor.execute(sql)
 
 grupos = cursor.fetchall() # guardar todos -  pega a consulta inteira
-for grupo_id in grupos:
-    print(grupo_id)
+for grupo in grupos:
+    print(grupo)
 
 # 2o passo: Consultar a tabela pessoas_grupo
+def consulta_pessoas_grupos_e_imprime(cursor):
+    sql = "SELECT pessoa_id, grupo_id FROM pessoas_grupos"  # confirmando quais são os grupos que estão disponíveis
+    cursor.execute(sql)
+    pessoas_grupos = cursor.fetchall()
 
-sql = "SELECT pessoa_id, grupo_id FROM pessoas_grupos" # confirmando quais são os grupos que estão disponíveis
-cursor.execute(sql)
+    for pessoa_grupo in pessoas_grupos:
+        print(pessoa_grupo)
 
-pessoas_grupos = cursor.fetchall() # guardar todos -  pega a consulta inteira
-for grupo_id in pessoas_grupos:
-    print(grupo_id)
+consulta_pessoas_grupos_e_imprime(cursor)
 
 # Pedir para que o usuário informe o grupo:
 pessoa_id = 12
@@ -35,9 +37,10 @@ cursor.execute(sql)
 # Confirmar o INSERT com commit() e fechar o banco
 
 conexao.commit()
-conexao.close()
 
-# visualizar
-for grupo_id in pessoas_grupos:
-    print(grupo_id)
+# Precisa selecionar novamente
+
+consulta_pessoas_grupos_e_imprime(cursor)
+
+conexao.close()
 
