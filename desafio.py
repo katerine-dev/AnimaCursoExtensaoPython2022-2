@@ -1,8 +1,17 @@
 # Importar a função do 'aulas-praticas-4-exemplo-conectar'
-
 import aulas_praticas_4_exemplo_conectar as bd
 
+def consulta_pessoas_grupos_e_imprime(cursor):
+    sql = "SELECT pessoa_id, grupo_id FROM pessoas_grupos"  # confirmando quais são os grupos que estão disponíveis
+    cursor.execute(sql)
+    pessoas_grupos = cursor.fetchall()
+
+    for pessoa_grupo in pessoas_grupos:
+        print(pessoa_grupo)
+
+
 conexao, cursor = bd.conectar()
+
 
 # Consulta aqui a tabela grupos e exibe na tela, pedindo para o usuário digitar o grupo_id
 
@@ -16,13 +25,6 @@ for grupo in grupos:
     print(grupo)
 
 # 2o passo: Consultar a tabela pessoas_grupo
-def consulta_pessoas_grupos_e_imprime(cursor):
-    sql = "SELECT pessoa_id, grupo_id FROM pessoas_grupos"  # confirmando quais são os grupos que estão disponíveis
-    cursor.execute(sql)
-    pessoas_grupos = cursor.fetchall()
-
-    for pessoa_grupo in pessoas_grupos:
-        print(pessoa_grupo)
 
 consulta_pessoas_grupos_e_imprime(cursor)
 
